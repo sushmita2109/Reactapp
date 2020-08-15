@@ -20,7 +20,7 @@ const DishDetail = ({ selectedDish }) => {
             </div>
             <div>
             { selectedDish &&
-            <CommentSection comment={selectedDish.comments} />
+            <CommentSection comments={selectedDish.comments} />
             } 
             </div>
         </div>
