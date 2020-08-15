@@ -1,14 +1,6 @@
 import  React, { Component } from 'react';
 
 const CommentSection =(comments) =>{
-    return(
-        <div>
-            {
-                comments.map((comment,index)=>{
-                return(<li key={index}>{comment.id}</li>)
-                })
-            }
-        </div>
-    );
+  console.log(comments)
 }
 export default CommentSection;
