@@ -18,7 +18,8 @@ class  CommentForms extends Component{
     
     render(){
       console.log(this.state.show)
-      return (<>
+      return (
+      <React.Fragment>
         <Button onClick={this.handleShow}>feedback</Button>
         
          <Modal show={this.state.show} >
@@ -27,7 +28,8 @@ class  CommentForms extends Component{
            </ModalHeader>
          </Modal>
        
-       </>)
+         </React.Fragment>
+         );
     }
 }
 export default CommentForms;
