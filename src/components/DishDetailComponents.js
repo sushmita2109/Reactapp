@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
-
+import CommentForms   from './CommentForm';
 
     // constructor(props){
     //     super(props);
@@ -10,14 +10,17 @@ import { Link } from 'react-router-dom';
         
         if (comments!=null){
             const comment = comments.map((cmt) => {
-                return(    
+                return(   
+                    
                     <li key={cmt.id}>
                         {cmt["comment"]}
                         <br/><br/>
                         -- {cmt.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(cmt.date)))}
                         <br/><br/>
-                    </li>                    
+                        </li>
                 );
+                
+                    
             })
 
             return(
@@ -66,6 +69,10 @@ import { Link } from 'react-router-dom';
                 <div className="row">
                     <RenderDish dish={props.dish}/>
                     <RenderComments comments={props.comments}/>
+                    
+                </div>
+                <div className="col">
+                    <CommentForms/>
                 </div>
                 </div>
             );
