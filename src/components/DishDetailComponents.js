@@ -79,6 +79,7 @@ import CommentForms   from './CommentForm';
         }
         else{
             return(
+                
                 <div className="row"></div>
             );
         }
