@@ -71,7 +71,7 @@ import CommentForms   from './CommentForm';
                     <RenderComments comments={props.comments}/>
                     
                 </div>
-                <div className="col">
+                <div className="col-12">
                     <CommentForms/>
                 </div>
                 </div>
